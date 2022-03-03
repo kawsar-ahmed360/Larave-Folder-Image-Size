@@ -1,0 +1,11 @@
+  $filecount = 0;
+
+        foreach (File::allFiles('upload/Brand') as $file) {
+            $filecount+=File::size($file);
+        }
+
+
+
+        $nesize = number_format($filecount / 1048576,2);
+
+        return $nesize;
